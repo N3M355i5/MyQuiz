@@ -1,0 +1,100 @@
+		<!DOCTYPE html>
+		<html>
+			<head>
+  				<meta charset="UTF-8">
+  				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 				<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  				<title>Assignment 4</title>
+  				<link rel="stylesheet" href="css/main.css" type="text/css">
+
+    			<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    			<script src="/js/script.js" type="text/javascript" charset="utf-8" async defer></script>
+
+    			<script>
+					$(document).ready(function() {
+						$('#div1').css('display', 'none');
+						$('#div1').fadeIn(2000);
+						$('#radiobtn').css('display', 'none');
+						$('#check').css('display', 'none');
+						$('#drop').css('display', 'none');
+						$('#submit').css('display', 'none');
+						$('.textbox').click(function() {
+							$('#radiobtn').fadeIn(10000);
+						});
+						$('#radiobtn').click(function() {
+							$('#check').fadeIn(5000);
+						});
+						$('#check').click(function() {
+							$('#drop').fadeIn(5000);
+							$('#radiobtn').fadeOut(2000);
+						});
+						$('#drop').click(function() {
+							$('#submit').fadeIn(5000);
+							$('#check').fadeOut(2000);
+						});
+						$('#submit').click(function() {
+							$('.container').css('background', '#7dfdff');
+							$("#div1").css('display', 'none');
+
+						});
+						$("#submit").click(function(){
+    						var txt = "";
+    						txt += "Width of div: " + $("#div1").width() + "</br>";
+    						txt += "Height of div: " + $("#div1").height();
+    						$("body").children().css('text-align', 'center');
+    						$("#div1").fadeIn(3000);
+    						$("#div1").html(txt);
+						});
+					});
+				</script>
+		</head>
+		<body>
+			<div class="container">
+				<div class="signup-box" id="div1">
+            		<div class="title">
+                		QUIZ
+            		</div>
+            		<div class="row" id="element">
+						<h3 align="center">Let's create a Quiz to check how much coding knowledge do you have?</h3>
+						<form method="get" accept-charset="utf-8">
+							<div class="textbox">
+								<label>Enter your key: <input type="password" name="pass" placeholder="KEY"></label><br>
+							</div>
+						<div id="radiobtn">
+							<h4>Which Organisation holds the Rights to HTML and CSS?</h4><br>
+							<label><input type="radio" name="quiz" id="one">WW3C</label><br>
+							<label><input type="radio" name="quiz" id="two">Firefox</label><br>
+							<label><input type="radio" name="quiz" id="three">GeeksforGeeks</label><br>
+							<label><input type="radio" name="quiz" id="four">AV Ltd</label><br><br>
+						</div>
+						<div id="check">
+							<h4>Most important Languages for Web Development</h4><br>
+							<label><input type="checkbox" name="lang" id="html">HTML</label><br>
+							<label><input type="checkbox" name="lang" id="css">CSS</label><br>
+							<label><input type="checkbox" name="lang" id="js">JS</label><br>
+							<label><input type="checkbox" name="lang" id="c">C++</label><br><br>
+						</div>
+						<div id="drop">
+							<h4>Select Your Gender Please</h4><br>
+							<select name="gender" >
+								<<option value="0">Please Select</option>}
+								option
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+							</select>
+						</div>
+						<div id="submit">
+							<div class="button" align="center" style="margin-top: 40px">
+                				<input type="button" value="Submit" onclick="return valForm()">
+            				</div>
+            				<div class="button" align="right" style="width: 40%; margin-left: 145px; margin-top: 10px">
+                				<input type="reset" value="Reset">
+            				</div>
+            			</div>
+						</form>
+				</div>
+			</div>
+		</div>
+	</body>
+	</html>
