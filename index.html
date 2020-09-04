@@ -22,7 +22,7 @@
 						$('.textbox').click(function() {
     						//Use of jQuery Animation Methods
     						$("#div1").animate({height: "600px"});
-							$('#radiobtn').fadeIn(10000);
+							$('#radiobtn').fadeIn(7000);
 						});
 						$('#radiobtn').click(function() {
 							$('#check').fadeIn(5000);
@@ -44,6 +44,9 @@
 
 
 						});
+						$('#resetbtn').click(function() {
+							location.reload(true);
+						})
 						$("#submit").click(function(){
     						var txt = "";
     						//Use of jQuery Dimensions Methods
@@ -54,7 +57,6 @@
     						$("#div1").fadeIn(1000);
     						$("#div1").animate({height: "170px"}, '200');
     						$("#div1").html('Developer Area:'+'<br><br>' + txt);
-
 						});
 					});
 				</script>
@@ -99,7 +101,7 @@
                 				<input type="button" value="Submit" onclick="return valForm()">
             				</div>
             				<div class="button" align="right" style="width: 40%; margin-left: 145px; margin-top: 10px">
-                				<input type="button" id="reset" value="Reset" onclick="index.html">
+                				<input type="button" id="resetbtn" value="Reset" onclick="index.html">
             				</div>
             			</div>
 						</form>
